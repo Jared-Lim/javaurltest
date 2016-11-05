@@ -16,13 +16,13 @@ public class urltest3 {
 		urlc.connect();
 		urlc = url.openConnection();
 		urlc.setRequestProperty("User-Agent", "Mozilla/5.0");
-		StringBuilder parsedContentFromUrl = new StringBuilder();
+		StringBuilder html = new StringBuilder();
 
 		BufferedInputStream in = new BufferedInputStream(urlc.getInputStream());
 		int ch;
 		while ((ch = in.read()) != -1) {
-		    parsedContentFromUrl.append((char) ch);
+		    html.append((char) ch);
 		}
-		System.out.println(parsedContentFromUrl);
+		System.out.println(html);
 	}
 }
